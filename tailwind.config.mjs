@@ -58,7 +58,10 @@ export default {
 				},
 				'sipsa-gray': {
 					DEFAULT: 'hsl(var(--sipsa-gray))',
-				}
+				},
+				'sipsa-dark-orange': {
+					DEFAULT: 'hsl(var(--sipsa-dark-orange))',
+				},
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
