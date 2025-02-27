@@ -1,6 +1,6 @@
-import Layout from '../components/layout'
-import { HeroBanner } from "../components/hero-banner"
-import ContactForm from "../components/contact-form"
+import Layout from '../../components/layout'
+import { HeroBanner } from "../../components/hero-banner"
+import ContactForm from "../../components/contact-form"
 
 export default function Contacto() {
   return (
