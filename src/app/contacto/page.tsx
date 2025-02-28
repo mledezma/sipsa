@@ -1,5 +1,6 @@
 import { HeroBanner } from "../../components/hero-banner"
 import ContactForm from "../../components/contact-form"
+import { ReCaptchaProvider } from "next-recaptcha-v3";
 
 export default function Contacto() {
   return (
@@ -10,7 +11,9 @@ export default function Contacto() {
       />
       <div className="container mx-auto py-12 md:py-28 px-4">
         <p className="text-sipsa-blue text-2xl mb-8">Cuéntanos los detalles del servicio que necesitas y te estaremos enviando la cotización a la mayor brevedad.</p>
-        <ContactForm />
+          <ReCaptchaProvider>
+            <ContactForm />
+          </ReCaptchaProvider>
       </div>
     </>
   )

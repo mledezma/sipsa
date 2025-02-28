@@ -8,10 +8,12 @@ interface ButtonProps {
   onClick?: () => void
   href?: string
   external?: boolean
-  style?: "primary" | "secondary"
+  style?: "primary" | "secondary",
+  type?: "button" | "submit" | "reset"
+  disabled?: boolean
 }
 
-export default function Button({ text, onClick, href, external = false, style = "primary" }: ButtonProps) {
+export default function Button({ text, onClick, href, external = false, style = "primary", type, disabled }: ButtonProps) {
   const commonClasses = cn(
     "relative overflow-hidden px-6 py-3 rounded-full text-semibold text-xl transition-all duration-300 ease-in-out group inline-block",
     style === "primary" && "bg-sipsa-blue text-white",
@@ -52,6 +54,8 @@ export default function Button({ text, onClick, href, external = false, style = 
     <button
       className={commonClasses}
       onClick={onClick}
+      type={type}
+      disabled={disabled}
     >
       {innerContent}
     </button>
