@@ -1,4 +1,3 @@
-import Layout from '../../components/layout'
 import { HeroBanner } from "../../components/hero-banner"
 import ContactForm from "../../components/contact-form"
 
@@ -14,13 +13,5 @@ export default function Contacto() {
         <ContactForm />
       </div>
     </>
-  )
-}
-
-Contacto.getLayout = function getLayout(page: React.ReactNode) {
-  return (
-    <Layout>
-      {page}
-    </Layout>
   )
 }

@@ -1,4 +1,3 @@
-import Layout from '../components/layout'
 import { HeroBanner } from "../components/hero-banner"
 import { PageSection } from "../components/page-section"
 import { FeaturedSection } from "../components/featured-section"
@@ -64,13 +63,5 @@ export default function Page() {
       />
       <FeaturedSection />
     </>
-  )
-}
-
-Page.getLayout = function getLayout(page: React.ReactNode) {
-  return (
-    <Layout>
-      {page}
-    </Layout>
   )
 }

@@ -79,4 +79,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  input, textarea {
+    @apply rounded-md px-4 py-2 border border-sipsa-gray focus:border-sipsa-blue focus:ring-sipsa-blue text-sipsa-blue transition-all duration-300;
+  }
+  label {
+    @apply text-sipsa-blue font-bold;
+  }
 }

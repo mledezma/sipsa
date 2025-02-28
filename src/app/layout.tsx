@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { Barlow } from 'next/font/google';
 import "../globals.css";
 import Header from '../components/header';
@@ -17,7 +16,7 @@ export default function Layout({
 }) {
   return (
     <html lang="en">
-     <Head>
+     <head>
         <meta name="description" content="SIPSA Logistica Integral" />
         <meta property="og:title" content="SIPSA CR" />
 
@@ -25,7 +24,7 @@ export default function Layout({
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </head>
       <body className={barlow.className}>
         <Header />
         <main className="pt-[134px]">
