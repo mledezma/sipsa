@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const { fullname, email, serviceType, zipCode, phoneNumber, additionalInfo } = formData;
     const { data, error } = await resend.emails.send({
       from: 'Sipsa - Sitio Web <website@sipsacr.com>',
-      to: ['marcoledezmacordero09@gmail.com'],
+      to: [process.env.EMAIL_TO as string],
       subject: 'Hay un nuevo mensaje del sitio web sipsacr.com',
       react: await EmailTemplate({
         fullname: fullname,
