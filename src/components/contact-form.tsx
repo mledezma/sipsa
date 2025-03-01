@@ -65,6 +65,14 @@ export default function ContactForm() {
         setResponse(data.message);
         setError(false);
         setSuccess(true);
+        setFormData({
+          fullname: '',
+          email: '',
+          serviceType: 'internationalTransport',
+          zipCode: '',
+          phoneNumber: '',
+          additionalInfo: '',
+        });
       }
     } catch (error) {
       setResponse('Algo salió mal. Por favor inténtelo de nuevo más tarde.');
