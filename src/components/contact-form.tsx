@@ -57,6 +57,7 @@ export default function ContactForm() {
       });
 
       const data = await res.json();
+      console.log('data', data);
       if (data.error) {
         setResponse('Algo salió mal. Por favor inténtelo de nuevo más tarde.');
         setSuccess(false);
