@@ -21,11 +21,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
+
   const scrollToSection = (sectionId: string) => {
     if (pathname === "/") {
       const section = document.getElementById(sectionId)
       if (section) {
         section.scrollIntoView({ behavior: "smooth" })
+        setIsMobileMenuOpen(false)
       }
     } else {
       // If not on home page, navigate to home and then scroll

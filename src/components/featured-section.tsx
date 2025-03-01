@@ -30,7 +30,7 @@ export function FeaturedSection() {
   return (
     <section className="text-sipsa-blue bg-sipsa-blue-foreground" id="conozcanos">
       <div className="container mx-auto py-12 md:py-28 px-4">
-        <div className="flex mb-12 md:mb-28">
+        <div className="flex flex-col md:flex-row mb-12 md:mb-28">
           <div className="flex-1 text-left py-6">
             <div className="max-w-[540px]">
               <h2 className="text-2xl md:text-4xl font-semibold mb-1">Somos SIPSA</h2>
