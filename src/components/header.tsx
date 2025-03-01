@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { X } from "lucide-react"
 import Button from "./button"
@@ -44,11 +46,20 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-white"}`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between relative">
         <div className="flex items-center">
-          <img src="/logo.svg?height=102&width=102" alt="SIPSA CR Logo" className="h-[102px] w-[102px] mr-4" />
+          <Link href="/">
+            <Image
+              alt="SIPSA CR Logo"
+              height={102}
+              width={102}
+              src="/logo.svg"
+              className="h-[102px] w-[102px] mr-4"
+            />
+          </Link>
+
           <span className="text-4xl font-bold text-sipsa-blue">SIPSA CR</span>
         </div>
         <nav className="hidden xl:flex items-center gap-x-6">
