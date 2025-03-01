@@ -49,8 +49,8 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-white"}`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between relative">
-        <div className="flex items-center">
-          <Link href="/">
+        <Link href="/">
+          <div className="flex items-center">
             <Image
               alt="SIPSA CR Logo"
               height={102}
@@ -58,10 +58,10 @@ export default function Header() {
               src="/logo.svg"
               className="h-[102px] w-[102px] mr-4"
             />
-          </Link>
 
-          <span className="text-4xl font-bold text-sipsa-blue">SIPSA CR</span>
-        </div>
+            <span className="text-4xl font-bold text-sipsa-blue">SIPSA CR</span>
+          </div>
+        </Link>
         <nav className="hidden xl:flex items-center gap-x-6">
           {headerLinks.map((section) => (
             <button
