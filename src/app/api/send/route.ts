@@ -5,7 +5,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { fullname, email, serviceType, zipCode, phoneNumber, additionalInfo } = await request.json();
+    const { data: formData, token } = await request.json();
+    const { fullname, email, serviceType, zipCode, phoneNumber, additionalInfo } = formData;
     const { data, error } = await resend.emails.send({
       from: 'Sipsa Website <website@sipsacr.com>',
       to: ['marcoledezmacordero09@gmail.com'],
@@ -22,6 +23,10 @@ export async function POST(request: Request) {
 
     if (error) {
       return Response.json({ error }, { status: 500 });
+    }
+
+    if (!token) {
+      return Response.json({ message: 'Captcha failed, invalid token.', name: 'internal_server_error' }, { status: 500 });
     }
 
     return Response.json(data);

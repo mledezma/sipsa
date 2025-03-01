@@ -1,13 +1,14 @@
 'use client';
 
+import dynamic from "next/dynamic";
 import { useState } from 'react';
 import PhoneInput from 'react-phone-number-input'
-import Select from 'react-select';
 import { useReCaptcha } from "next-recaptcha-v3";
 import 'react-phone-number-input/style.css'
 import Button from './button';
 import { cn } from '../lib/utils';
 import { FormData } from '../lib/types';
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -20,6 +21,9 @@ export default function ContactForm() {
   });
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState<string | null>(null);
+  const [success, setSuccess] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+
   // Import 'executeRecaptcha' using 'useReCaptcha' hook
   const { executeRecaptcha } = useReCaptcha();
 
@@ -48,14 +52,23 @@ export default function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           data: formData,
-          token: token
+          token: token,
         }),
       });
 
       const data = await res.json();
-      setResponse(data.message);
+      if (data.error) {
+        setResponse('Algo salió mal. Por favor inténtelo de nuevo más tarde.');
+        setSuccess(false);
+        setError(true);
+      } else {
+        setResponse(data.message);
+        setError(false);
+        setSuccess(true);
+      }
     } catch (error) {
-      setResponse('Something went wrong. Please try again.');
+      setResponse('Algo salió mal. Por favor inténtelo de nuevo más tarde.');
+      setError(true);
     }
 
     setLoading(false);
@@ -150,7 +163,8 @@ export default function ContactForm() {
       </fieldset>
 
       <Button type="submit" disabled={loading} text={loading ? 'Solicitando...' : 'Solicitar más información'} />
-      {response && <p className="text-center">{response}</p>}
+      {(response && success) && <p className="text-center text-green-600 text-xl mt-4 font-semibold">Muchas gracias por tu mensaje, pronto estaremos en contacto.</p>}
+      {(response && error) && <p className="text-center text-red-600 text-xl mt-4 font-semibold">{response}</p>}
     </form>
   );
 }
