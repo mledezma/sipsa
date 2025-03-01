@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.sipsacr.com
+
+# Sitemaps
+Sitemap: https://www.sipsacr.com/sitemap.xml
