@@ -2,6 +2,7 @@ import { Barlow } from 'next/font/google';
 import "../globals.css";
 import Header from '../components/header';
 import Footer from '../components/footer';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Apply the font globally
 const barlow = Barlow({
@@ -31,6 +32,7 @@ export default function Layout({
           {children}
         </main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   )
