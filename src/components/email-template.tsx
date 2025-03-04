@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Image from 'next/image';
 import { FormData } from '../lib/types';
 import {
   Body,
@@ -16,9 +15,11 @@ import {
   Hr,
 } from '@react-email/components';
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : '';
+// TODO: For some reason process.env.VERCEL_URL is not working
+// const baseUrl = process.env.VERCEL_URL
+//   ? `https://sipsacr.com`
+//   : '';
+const baseUrl = 'https://sipsacr.com';
 
 export const EmailTemplate: React.FC<Readonly<FormData>> = ({
   fullname,

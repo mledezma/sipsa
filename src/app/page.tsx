@@ -8,7 +8,7 @@ export default function Page() {
       <HeroBanner
         title="Descubre Nuestros Servicios de Logística Integral"
         description="Explora cómo podemos simplificar tus operaciones de transporte."
-        backgroundImage="/placeholder.jpg"
+        backgroundImage="/truck-long.jpg"
         ctas={[
           { text: "Cotiza hoy mismo", href: "/contacto" },
         ]}
@@ -19,10 +19,10 @@ export default function Page() {
         title="Logística Integral de Transporte Marítimo, Aéreo y Terrestre"
         description="Servicios integrales de planificación y gestión de la cadena de suministro, optimizando rutas y tiempos de entrega."
         listItems={[
-          "Rapidez y Eficiencia",
-          "Garantía de protección",
-          "Costos optimizados",
-          "Cumplimiento normativo",
+          "Conexiones Globales",
+          "Tramites Aduaneros Simplificados",
+          "Alianzas Estratégicas",
+          "Alianzas Estratégicas",
         ]}
         image="/truck-1.jpg"
         ctas={[
@@ -35,7 +35,7 @@ export default function Page() {
         description="Servicios de transporte de mercancías dentro del país, con rutas optimizadas para asegurar entregas rápidas y seguras."
         listItems={[
           "Rapidez y Eficiencia",
-          "Garantía de protección",
+          "Garantía de Entregas a Tiempo",
           "Costos optimizados",
           "Cumplimiento normativo",
         ]}
