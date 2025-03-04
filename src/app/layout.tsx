@@ -18,13 +18,15 @@ export default function Layout({
   return (
     <html lang="en">
      <head>
-        <meta name="description" content="SIPSA Logistica Integral" />
-        <meta property="og:title" content="SIPSA CR" />
+        <meta property="og:title" content="SIPSA" />
+        <meta name="author" content="SIPSA" />
         <meta name="description" content="Servicios integrales de planificación y gestión de la cadena de suministro, optimizando rutas y tiempos de entrega."/>
         <meta property="og:description" content="Servicios integrales de planificación y gestión de la cadena de suministro, optimizando rutas y tiempos de entrega." />
         <meta property="og:image" content="https://www.sipsacr.com/truck-1.jpg" />
+        <meta property="og:url" content="https://www.sipsacr.com" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="https://www.sipsacr.com/truck-1.jpg" />
-        <title>SIPSA CR</title>
+        <title>SIPSA</title>
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
