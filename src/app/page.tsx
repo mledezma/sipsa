@@ -17,7 +17,7 @@ export default function Page() {
         id="logistica-integral"
         sectionTitle="Nuestros servicios"
         title="Logística Integral de Transporte Marítimo, Aéreo y Terrestre"
-        description="Servicios integrales de planificación y gestión de la cadena de suministro, optimizando rutas y tiempos de entrega."
+        description="Soluciones logísticas integrales para el transporte marítimo, aéreo y terrestre, con conexiones globales, tecnología de seguimiento en tiempo real y gestión aduanera simplificada. Optimizamos rutas y tiempos de entrega para garantizar envíos seguros y puntuales en todo el mundo."
         listItems={[
           "Conexiones Globales",
           "Tramites Aduaneros Simplificados",
@@ -32,7 +32,7 @@ export default function Page() {
       <PageSection
         id="transporte-nacional"
         title="Transporte Nacional de Carga"
-        description="Servicios de transporte de mercancías dentro del país, con rutas optimizadas para asegurar entregas rápidas y seguras."
+        description="Transporte de carga dentro del país con rutas estratégicamente optimizadas para garantizar entregas rápidas, seguras y al mejor costo. Cumplimos con todas las normativas vigentes para ofrecer un servicio eficiente y confiable"
         listItems={[
           "Rapidez y Eficiencia",
           "Garantía de Entregas a Tiempo",
