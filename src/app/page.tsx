@@ -49,12 +49,12 @@ export default function Page() {
       <PageSection
         id="transporte-internacional"
         title="Transporte Internacional de Carga"
-        description="Transporte de mercancías entre diferentes países, cumpliendo con todas las normativas aduaneras y garantizando la seguridad de los bienes durante el tránsito."
+        description="Soluciones eficientes para el transporte internacional de carga, asegurando el cumplimiento de normativas aduaneras y la protección de la mercancía en todo su recorrido. Optimizamos costos y tiempos para ofrecer un servicio seguro y confiable en cada envío."
         listItems={[
-          "Rapidez y Eficiencia",
-          "Garantía de protección",
-          "Costos optimizados",
-          "Cumplimiento normativo",
+          "Envíos Ágiles y Eficientes",
+          "Máxima Seguridad y Protección",
+          "Optimización de Costos Logísticos",
+          "Cumplimiento Aduanero Garantizado",
         ]}
         image="/truck-3.jpg"
         ctas={[
